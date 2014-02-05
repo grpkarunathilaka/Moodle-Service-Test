@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.ContactAccreditation" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.ContactAccreditation" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.Accreditation" />
+  <xs:complexType name="ArrayOfContactAccreditationView">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ContactAccreditationView" nillable="true" type="tns:ContactAccreditationView" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfContactAccreditationView" nillable="true" type="tns:ArrayOfContactAccreditationView" />
+  <xs:complexType name="ContactAccreditationView">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.Accreditation" base="q1:AccreditationView">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Completed" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ContactID" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ContactAccreditationView" nillable="true" type="tns:ContactAccreditationView" />
+</xs:schema>

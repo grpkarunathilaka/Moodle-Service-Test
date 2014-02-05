@@ -1,0 +1,6 @@
+c:\users\ranga.gamage.sope\documents\visual studio 2012\Projects\MoodleServiceTest\MoodleServiceTest\bin\Debug\MoodleServiceTest.exe.config
+c:\users\ranga.gamage.sope\documents\visual studio 2012\Projects\MoodleServiceTest\MoodleServiceTest\bin\Debug\MoodleServiceTest.exe
+c:\users\ranga.gamage.sope\documents\visual studio 2012\Projects\MoodleServiceTest\MoodleServiceTest\bin\Debug\MoodleServiceTest.pdb
+c:\users\ranga.gamage.sope\documents\visual studio 2012\Projects\MoodleServiceTest\MoodleServiceTest\obj\Debug\MoodleServiceTest.csprojResolveAssemblyReference.cache
+c:\users\ranga.gamage.sope\documents\visual studio 2012\Projects\MoodleServiceTest\MoodleServiceTest\obj\Debug\MoodleServiceTest.exe
+c:\users\ranga.gamage.sope\documents\visual studio 2012\Projects\MoodleServiceTest\MoodleServiceTest\obj\Debug\MoodleServiceTest.pdb

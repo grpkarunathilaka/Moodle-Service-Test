@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://Austswim.Orams/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Austswim.Orams/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://Austswim.Orams/Imports">
+      <xsd:import schemaLocation="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd0" namespace="http://Austswim.Orams/" />
+      <xsd:import schemaLocation="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Messages.MembershipUser" />
+      <xsd:import schemaLocation="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Austswim.Orams.Infrastructure" />
+      <xsd:import schemaLocation="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.MembershipUser" />
+      <xsd:import schemaLocation="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.Contact" />
+      <xsd:import schemaLocation="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.ContactAccreditation" />
+      <xsd:import schemaLocation="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.Accreditation" />
+      <xsd:import schemaLocation="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.AccreditationType" />
+      <xsd:import schemaLocation="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.Competency" />
+      <xsd:import schemaLocation="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd10" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd11" namespace="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.Enumerations" />
+      <xsd:import schemaLocation="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd12" namespace="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.ContactActivity" />
+      <xsd:import schemaLocation="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd13" namespace="http://schemas.datacontract.org/2004/07/Austswim.Orams.Model.Enumerations" />
+      <xsd:import schemaLocation="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd14" namespace="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.Administrator" />
+      <xsd:import schemaLocation="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd15" namespace="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.SecurityRole" />
+      <xsd:import schemaLocation="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd16" namespace="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.SecurityRolePermission" />
+      <xsd:import schemaLocation="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd17" namespace="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.SecurityRoleControlPermission" />
+      <xsd:import schemaLocation="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd18" namespace="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.ContactNonAccreditation" />
+      <xsd:import schemaLocation="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd19" namespace="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.NonAccreditation" />
+      <xsd:import schemaLocation="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd20" namespace="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.NonAccreditationCompetency" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IMembershipUserService_ActivateAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActivateAccount" />
+  </wsdl:message>
+  <wsdl:message name="IMembershipUserService_ActivateAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActivateAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMembershipUserService_DeactivateAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeactivateAccount" />
+  </wsdl:message>
+  <wsdl:message name="IMembershipUserService_DeactivateAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeactivateAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMembershipUserService_CreateAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAccount" />
+  </wsdl:message>
+  <wsdl:message name="IMembershipUserService_CreateAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMembershipUserService_GetMembershipUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMembershipUser" />
+  </wsdl:message>
+  <wsdl:message name="IMembershipUserService_GetMembershipUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMembershipUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMembershipUserService_GetByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetByID" />
+  </wsdl:message>
+  <wsdl:message name="IMembershipUserService_GetByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMembershipUserService_UpdateAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAccount" />
+  </wsdl:message>
+  <wsdl:message name="IMembershipUserService_UpdateAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMembershipUserService_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IMembershipUserService_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMembershipUserService_RetrievePassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrievePassword" />
+  </wsdl:message>
+  <wsdl:message name="IMembershipUserService_RetrievePassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrievePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMembershipUserService_RetrievePasswordByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrievePasswordByID" />
+  </wsdl:message>
+  <wsdl:message name="IMembershipUserService_RetrievePasswordByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrievePasswordByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMembershipUserService_DeleteAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAccount" />
+  </wsdl:message>
+  <wsdl:message name="IMembershipUserService_DeleteAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMembershipUserService_DeleteAccountByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAccountByID" />
+  </wsdl:message>
+  <wsdl:message name="IMembershipUserService_DeleteAccountByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAccountByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMembershipUserService_ChangePassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangePassword" />
+  </wsdl:message>
+  <wsdl:message name="IMembershipUserService_ChangePassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMembershipUserService_UserLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserLogin" />
+  </wsdl:message>
+  <wsdl:message name="IMembershipUserService_UserLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserLoginResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IMembershipUserService">
+    <wsdl:operation name="ActivateAccount">
+      <wsdl:input wsaw:Action="http://Austswim.Orams/IMembershipUserService/ActivateAccount" message="tns:IMembershipUserService_ActivateAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://Austswim.Orams/IMembershipUserService/ActivateAccountResponse" message="tns:IMembershipUserService_ActivateAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeactivateAccount">
+      <wsdl:input wsaw:Action="http://Austswim.Orams/IMembershipUserService/DeactivateAccount" message="tns:IMembershipUserService_DeactivateAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://Austswim.Orams/IMembershipUserService/DeactivateAccountResponse" message="tns:IMembershipUserService_DeactivateAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateAccount">
+      <wsdl:input wsaw:Action="http://Austswim.Orams/IMembershipUserService/CreateAccount" message="tns:IMembershipUserService_CreateAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://Austswim.Orams/IMembershipUserService/CreateAccountResponse" message="tns:IMembershipUserService_CreateAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMembershipUser">
+      <wsdl:input wsaw:Action="http://Austswim.Orams/IMembershipUserService/GetMembershipUser" message="tns:IMembershipUserService_GetMembershipUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://Austswim.Orams/IMembershipUserService/GetMembershipUserResponse" message="tns:IMembershipUserService_GetMembershipUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetByID">
+      <wsdl:input wsaw:Action="http://Austswim.Orams/IMembershipUserService/GetByID" message="tns:IMembershipUserService_GetByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://Austswim.Orams/IMembershipUserService/GetByIDResponse" message="tns:IMembershipUserService_GetByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAccount">
+      <wsdl:input wsaw:Action="http://Austswim.Orams/IMembershipUserService/UpdateAccount" message="tns:IMembershipUserService_UpdateAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://Austswim.Orams/IMembershipUserService/UpdateAccountResponse" message="tns:IMembershipUserService_UpdateAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://Austswim.Orams/IMembershipUserService/Login" message="tns:IMembershipUserService_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://Austswim.Orams/IMembershipUserService/LoginResponse" message="tns:IMembershipUserService_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrievePassword">
+      <wsdl:input wsaw:Action="http://Austswim.Orams/IMembershipUserService/RetrievePassword" message="tns:IMembershipUserService_RetrievePassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://Austswim.Orams/IMembershipUserService/RetrievePasswordResponse" message="tns:IMembershipUserService_RetrievePassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrievePasswordByID">
+      <wsdl:input wsaw:Action="http://Austswim.Orams/IMembershipUserService/RetrievePasswordByID" message="tns:IMembershipUserService_RetrievePasswordByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://Austswim.Orams/IMembershipUserService/RetrievePasswordByIDResponse" message="tns:IMembershipUserService_RetrievePasswordByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAccount">
+      <wsdl:input wsaw:Action="http://Austswim.Orams/IMembershipUserService/DeleteAccount" message="tns:IMembershipUserService_DeleteAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://Austswim.Orams/IMembershipUserService/DeleteAccountResponse" message="tns:IMembershipUserService_DeleteAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAccountByID">
+      <wsdl:input wsaw:Action="http://Austswim.Orams/IMembershipUserService/DeleteAccountByID" message="tns:IMembershipUserService_DeleteAccountByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://Austswim.Orams/IMembershipUserService/DeleteAccountByIDResponse" message="tns:IMembershipUserService_DeleteAccountByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <wsdl:input wsaw:Action="http://Austswim.Orams/IMembershipUserService/ChangePassword" message="tns:IMembershipUserService_ChangePassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://Austswim.Orams/IMembershipUserService/ChangePasswordResponse" message="tns:IMembershipUserService_ChangePassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserLogin">
+      <wsdl:input wsaw:Action="http://Austswim.Orams/IMembershipUserService/UserLogin" message="tns:IMembershipUserService_UserLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://Austswim.Orams/IMembershipUserService/UserLoginResponse" message="tns:IMembershipUserService_UserLogin_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

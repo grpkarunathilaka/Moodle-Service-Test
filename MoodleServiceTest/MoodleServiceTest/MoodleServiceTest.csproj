@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7F9BA815-E439-414F-AC66-700A93432C8C}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MoodleServiceTest</RootNamespace>
+    <AssemblyName>MoodleServiceTest</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\MembershipService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Service References\MembershipService\MembershipUserService.wsdl" />
+    <None Include="Service References\MembershipService\MembershipUserService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MembershipService\MembershipUserService1.wsdl" />
+    <None Include="Service References\MembershipService\MembershipUserService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MembershipService\MembershipUserService10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MembershipService\MembershipUserService11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MembershipService\MembershipUserService12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MembershipService\MembershipUserService13.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MembershipService\MembershipUserService14.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MembershipService\MembershipUserService15.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MembershipService\MembershipUserService16.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MembershipService\MembershipUserService17.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MembershipService\MembershipUserService18.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MembershipService\MembershipUserService19.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MembershipService\MembershipUserService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MembershipService\MembershipUserService20.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MembershipService\MembershipUserService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MembershipService\MembershipUserService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MembershipService\MembershipUserService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MembershipService\MembershipUserService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MembershipService\MembershipUserService7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MembershipService\MembershipUserService8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MembershipService\MembershipUserService9.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MembershipService\MoodleServiceTest.MembershipService.ActivateAccountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MembershipService\MoodleServiceTest.MembershipService.ChangePasswordResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MembershipService\MoodleServiceTest.MembershipService.CreateAccountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MembershipService\MoodleServiceTest.MembershipService.DeactivateAccountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MembershipService\MoodleServiceTest.MembershipService.DeleteAccountByIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MembershipService\MoodleServiceTest.MembershipService.DeleteAccountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MembershipService\MoodleServiceTest.MembershipService.GetMembershipUserByIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MembershipService\MoodleServiceTest.MembershipService.GetMembershipUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MembershipService\MoodleServiceTest.MembershipService.MembershipUserLoginResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MembershipService\MoodleServiceTest.MembershipService.RetrieveMembershipUserPasswordByIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MembershipService\MoodleServiceTest.MembershipService.RetrieveMembershipUserPasswordResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MembershipService\MoodleServiceTest.MembershipService.UpdateAccountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MembershipService\MoodleServiceTest.MembershipService.UserLoginResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\MembershipService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MembershipService\MembershipUserService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MembershipService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MembershipService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MembershipService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Messages.MembershipUser" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Messages.MembershipUser" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.MembershipUser" />
+  <xs:import schemaLocation="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Austswim.Orams.Infrastructure" />
+  <xs:import schemaLocation="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.Contact" />
+  <xs:complexType name="ActivateAccountRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApplicationId" type="ser:guid" />
+      <xs:element minOccurs="0" name="UserId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ActivateAccountRequest" nillable="true" type="tns:ActivateAccountRequest" />
+  <xs:complexType name="ActivateAccountResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Austswim.Orams.Infrastructure" base="q1:Response">
+        <xs:sequence>
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.MembershipUser" minOccurs="0" name="MembershipUserView" nillable="true" type="q2:MembershipUserView" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ActivateAccountResponse" nillable="true" type="tns:ActivateAccountResponse" />
+  <xs:complexType name="DeactivateAccountRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApplicationId" type="ser:guid" />
+      <xs:element minOccurs="0" name="UserId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeactivateAccountRequest" nillable="true" type="tns:DeactivateAccountRequest" />
+  <xs:complexType name="DeactivateAccountResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Austswim.Orams.Infrastructure" base="q3:Response">
+        <xs:sequence>
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.MembershipUser" minOccurs="0" name="MembershipUserView" nillable="true" type="q4:MembershipUserView" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeactivateAccountResponse" nillable="true" type="tns:DeactivateAccountResponse" />
+  <xs:complexType name="CreateAccountRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApplicationId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RequiresApproval" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CreateAccountRequest" nillable="true" type="tns:CreateAccountRequest" />
+  <xs:complexType name="CreateAccountResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/Austswim.Orams.Infrastructure" base="q5:Response">
+        <xs:sequence>
+          <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.MembershipUser" minOccurs="0" name="MembershipUserView" nillable="true" type="q6:MembershipUserView" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CreateAccountResponse" nillable="true" type="tns:CreateAccountResponse" />
+  <xs:complexType name="GetMembershipUserRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApplicationId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetMembershipUserRequest" nillable="true" type="tns:GetMembershipUserRequest" />
+  <xs:complexType name="GetMembershipUserResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/Austswim.Orams.Infrastructure" base="q7:Response">
+        <xs:sequence>
+          <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.MembershipUser" minOccurs="0" name="MembershipUserView" nillable="true" type="q8:MembershipUserView" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetMembershipUserResponse" nillable="true" type="tns:GetMembershipUserResponse" />
+  <xs:complexType name="GetMembershipUserByIDRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApplicationId" type="ser:guid" />
+      <xs:element minOccurs="0" name="UserId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetMembershipUserByIDRequest" nillable="true" type="tns:GetMembershipUserByIDRequest" />
+  <xs:complexType name="GetMembershipUserByIDResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://schemas.datacontract.org/2004/07/Austswim.Orams.Infrastructure" base="q9:Response">
+        <xs:sequence>
+          <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.MembershipUser" minOccurs="0" name="MembershipUserView" nillable="true" type="q10:MembershipUserView" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetMembershipUserByIDResponse" nillable="true" type="tns:GetMembershipUserByIDResponse" />
+  <xs:complexType name="UpdateAccountRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApplicationId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UpdateAccountRequest" nillable="true" type="tns:UpdateAccountRequest" />
+  <xs:complexType name="UpdateAccountResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://schemas.datacontract.org/2004/07/Austswim.Orams.Infrastructure" base="q11:Response">
+        <xs:sequence>
+          <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.MembershipUser" minOccurs="0" name="MembershipUserView" nillable="true" type="q12:MembershipUserView" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UpdateAccountResponse" nillable="true" type="tns:UpdateAccountResponse" />
+  <xs:complexType name="MembershipUserLoginRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApplicationId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MembershipUserLoginRequest" nillable="true" type="tns:MembershipUserLoginRequest" />
+  <xs:complexType name="MembershipUserLoginResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q13="http://schemas.datacontract.org/2004/07/Austswim.Orams.Infrastructure" base="q13:Response">
+        <xs:sequence>
+          <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.MembershipUser" minOccurs="0" name="MembershipUserView" nillable="true" type="q14:MembershipUserView" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MembershipUserLoginResponse" nillable="true" type="tns:MembershipUserLoginResponse" />
+  <xs:complexType name="RetrieveMembershipUserPasswordRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApplicationId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RetrieveMembershipUserPasswordRequest" nillable="true" type="tns:RetrieveMembershipUserPasswordRequest" />
+  <xs:complexType name="RetrieveMembershipUserPasswordResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q15="http://schemas.datacontract.org/2004/07/Austswim.Orams.Infrastructure" base="q15:Response">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveMembershipUserPasswordResponse" nillable="true" type="tns:RetrieveMembershipUserPasswordResponse" />
+  <xs:complexType name="RetrieveMembershipUserPasswordByIDRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApplicationId" type="ser:guid" />
+      <xs:element minOccurs="0" name="UserId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RetrieveMembershipUserPasswordByIDRequest" nillable="true" type="tns:RetrieveMembershipUserPasswordByIDRequest" />
+  <xs:complexType name="RetrieveMembershipUserPasswordByIDResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q16="http://schemas.datacontract.org/2004/07/Austswim.Orams.Infrastructure" base="q16:Response">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveMembershipUserPasswordByIDResponse" nillable="true" type="tns:RetrieveMembershipUserPasswordByIDResponse" />
+  <xs:complexType name="DeleteAccountRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApplicationId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeleteAccountRequest" nillable="true" type="tns:DeleteAccountRequest" />
+  <xs:complexType name="DeleteAccountResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q17="http://schemas.datacontract.org/2004/07/Austswim.Orams.Infrastructure" base="q17:Response">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeleteAccountResponse" nillable="true" type="tns:DeleteAccountResponse" />
+  <xs:complexType name="DeleteAccountByIDRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApplicationId" type="ser:guid" />
+      <xs:element minOccurs="0" name="UserId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeleteAccountByIDRequest" nillable="true" type="tns:DeleteAccountByIDRequest" />
+  <xs:complexType name="DeleteAccountByIDResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q18="http://schemas.datacontract.org/2004/07/Austswim.Orams.Infrastructure" base="q18:Response">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeleteAccountByIDResponse" nillable="true" type="tns:DeleteAccountByIDResponse" />
+  <xs:complexType name="ChangePasswordRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApplicationId" type="ser:guid" />
+      <xs:element minOccurs="0" name="NewPassword" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OldPassword" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ChangePasswordRequest" nillable="true" type="tns:ChangePasswordRequest" />
+  <xs:complexType name="ChangePasswordResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q19="http://schemas.datacontract.org/2004/07/Austswim.Orams.Infrastructure" base="q19:Response">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ChangePasswordResponse" nillable="true" type="tns:ChangePasswordResponse" />
+  <xs:complexType name="UserLoginRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApplicationId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserLoginRequest" nillable="true" type="tns:UserLoginRequest" />
+  <xs:complexType name="UserLoginResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q20="http://schemas.datacontract.org/2004/07/Austswim.Orams.Infrastructure" base="q20:Response">
+        <xs:sequence>
+          <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.Contact" minOccurs="0" name="ContactView" nillable="true" type="q21:ContactView" />
+          <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.MembershipUser" minOccurs="0" name="MembershipUserView" nillable="true" type="q22:MembershipUserView" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserLoginResponse" nillable="true" type="tns:UserLoginResponse" />
+</xs:schema>

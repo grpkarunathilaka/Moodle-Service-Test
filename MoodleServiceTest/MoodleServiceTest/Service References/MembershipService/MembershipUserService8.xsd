@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.Contact" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.Contact" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.ContactAccreditation" />
+  <xs:import schemaLocation="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd12" namespace="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.ContactActivity" />
+  <xs:import schemaLocation="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd11" namespace="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.Enumerations" />
+  <xs:import schemaLocation="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd18" namespace="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.ContactNonAccreditation" />
+  <xs:complexType name="ContactView">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ABN" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.ContactAccreditation" minOccurs="0" name="AccreditationViewList" nillable="true" type="q1:ArrayOfContactAccreditationView" />
+      <xs:element minOccurs="0" name="ActivePresenter" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Address1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Address2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AssessorPhone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AssessorRegDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="AssessorVenue1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AssessorVenue2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AssessorVenue3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AuthorID" type="ser:guid" />
+      <xs:element minOccurs="0" name="BusinessPhone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CPRProvider" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CPRProviderID" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="CertIV" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CertificateIssue" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CommunicationID" nillable="true" type="ser:guid" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.ContactActivity" minOccurs="0" name="ContactActivityViewList" nillable="true" type="q2:ArrayOfContactActivityView" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.Enumerations" minOccurs="0" name="ContactType" type="q3:ContactTypeEnum" />
+      <xs:element minOccurs="0" name="ContractSignedDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CountryID" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="CountryOfBirthId" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="CourseProvider" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CreatedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DOB" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateCertAcquired" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Deleted" type="xs:boolean" />
+      <xs:element minOccurs="0" name="EditorID" type="ser:guid" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmailOptOut" type="xs:boolean" />
+      <xs:element minOccurs="0" name="EmergencyContact" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmergencyPhoneNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExternalID" type="xs:int" />
+      <xs:element minOccurs="0" name="FMAustSwimNo" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Fax" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FullName" nillable="true" type="xs:string" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.Enumerations" minOccurs="0" name="Gender" type="q4:GenderEnum" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.Enumerations" minOccurs="0" name="Heritage" nillable="true" type="q5:HeritageEnum" />
+      <xs:element minOccurs="0" name="HomePhone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="ser:guid" />
+      <xs:element minOccurs="0" name="IsAssessor" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.Enumerations" minOccurs="0" name="MailStatus" nillable="true" type="q6:MailStatusEnum" />
+      <xs:element minOccurs="0" name="MedicalRestrictions" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mobile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModifiedDate" type="xs:dateTime" />
+      <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.ContactNonAccreditation" minOccurs="0" name="NonAccreditationViewList" nillable="true" type="q7:ArrayOfContactNonAccreditationView" />
+      <xs:element minOccurs="0" name="OrganisationName" nillable="true" type="xs:string" />
+      <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.Enumerations" minOccurs="0" name="Origin" type="q8:ContactOriginEnum" />
+      <xs:element minOccurs="0" name="PersonalRescueComp" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Position" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PostalAddress1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PostalAddress2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PostalCountryID" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="PostalPostcode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PostalStateID" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="PostalSuburb" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Postcode" nillable="true" type="xs:string" />
+      <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.Enumerations" minOccurs="0" name="PreferredContactMethod" nillable="true" type="q9:PreferredContactMethodEnum" />
+      <xs:element minOccurs="0" name="ResumeReceived" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SMSOptOut" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SecurityKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SelectedCertIV" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="StateID" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="Suburb" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserId" nillable="true" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ContactView" nillable="true" type="tns:ContactView" />
+</xs:schema>

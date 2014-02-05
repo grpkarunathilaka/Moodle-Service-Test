@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Austswim.Orams.Model.Enumerations" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Austswim.Orams.Model.Enumerations" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="ContactActivityEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AddContact" />
+      <xs:enumeration value="UpdateContact" />
+      <xs:enumeration value="DeleteContact" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ContactActivityEnum" nillable="true" type="tns:ContactActivityEnum" />
+</xs:schema>

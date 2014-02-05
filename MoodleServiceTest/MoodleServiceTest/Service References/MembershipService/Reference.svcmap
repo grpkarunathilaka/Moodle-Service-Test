@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2fd9b5a0-3b06-4ef4-a4ea-d9186039e8e1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://orams.austswim.com.au:98/MembershipUserService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MembershipUserService.xsd" MetadataType="Schema" ID="d5c5da50-2a1d-4d8f-b3b7-d23f5d83e81c" SourceId="1" SourceUrl="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd15" />
+    <MetadataFile FileName="MembershipUserService1.xsd" MetadataType="Schema" ID="3566074e-6d12-440b-a5f1-9fdca2a6e32c" SourceId="1" SourceUrl="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd8" />
+    <MetadataFile FileName="MembershipUserService2.xsd" MetadataType="Schema" ID="7216c10a-823d-4674-8577-3a9010e184c4" SourceId="1" SourceUrl="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd4" />
+    <MetadataFile FileName="MembershipUserService3.xsd" MetadataType="Schema" ID="0c6690d9-5809-4bd7-a8f4-15c96bbb17c6" SourceId="1" SourceUrl="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd0" />
+    <MetadataFile FileName="MembershipUserService4.xsd" MetadataType="Schema" ID="2a9438a0-895f-4b80-a7d1-301649889d19" SourceId="1" SourceUrl="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd16" />
+    <MetadataFile FileName="MembershipUserService.wsdl" MetadataType="Wsdl" ID="dcf9a2a9-4b73-41aa-a6b1-35b5eaf9c847" SourceId="1" SourceUrl="http://orams.austswim.com.au:98/MembershipUserService.svc?wsdl" />
+    <MetadataFile FileName="MembershipUserService5.xsd" MetadataType="Schema" ID="912a50d3-4d5f-4d64-ba55-5f9ed939f520" SourceId="1" SourceUrl="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd18" />
+    <MetadataFile FileName="MembershipUserService6.xsd" MetadataType="Schema" ID="ad4daf29-07c5-48ef-b520-c8aa7ffd5983" SourceId="1" SourceUrl="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd11" />
+    <MetadataFile FileName="MembershipUserService7.xsd" MetadataType="Schema" ID="e6c65f00-a52f-45d3-adfb-a5cb52fcd715" SourceId="1" SourceUrl="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd9" />
+    <MetadataFile FileName="MembershipUserService8.xsd" MetadataType="Schema" ID="451019ab-ef47-4e61-b908-2338d2442b68" SourceId="1" SourceUrl="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd5" />
+    <MetadataFile FileName="MembershipUserService9.xsd" MetadataType="Schema" ID="c0eb2b4e-7a00-48a0-a135-f3d629100ad9" SourceId="1" SourceUrl="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd1" />
+    <MetadataFile FileName="MembershipUserService10.xsd" MetadataType="Schema" ID="d398c198-e340-4134-84dd-8938b697699c" SourceId="1" SourceUrl="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd17" />
+    <MetadataFile FileName="MembershipUserService11.xsd" MetadataType="Schema" ID="a4e7cdf7-7ff0-4bdb-aba4-c476eba5c4fb" SourceId="1" SourceUrl="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd14" />
+    <MetadataFile FileName="MembershipUserService12.xsd" MetadataType="Schema" ID="f6599773-0196-445c-9e59-e1fab779e3dc" SourceId="1" SourceUrl="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd6" />
+    <MetadataFile FileName="MembershipUserService13.xsd" MetadataType="Schema" ID="0336e660-5767-4d8d-8656-72984620a591" SourceId="1" SourceUrl="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd2" />
+    <MetadataFile FileName="MembershipUserService1.wsdl" MetadataType="Wsdl" ID="745cd330-90a9-4c48-a150-be93faf7a124" SourceId="1" SourceUrl="http://orams.austswim.com.au:98/MembershipUserService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="MembershipUserService14.xsd" MetadataType="Schema" ID="51778c86-74d4-4323-a8a2-6d51d935f4f7" SourceId="1" SourceUrl="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd10" />
+    <MetadataFile FileName="MembershipUserService15.xsd" MetadataType="Schema" ID="13b41991-6bbd-453a-8dd1-5d5d9116fbae" SourceId="1" SourceUrl="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd19" />
+    <MetadataFile FileName="MembershipUserService16.xsd" MetadataType="Schema" ID="36cdf454-adbe-4e30-9f0a-faed43b3a2bb" SourceId="1" SourceUrl="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd7" />
+    <MetadataFile FileName="MembershipUserService17.xsd" MetadataType="Schema" ID="2e68e076-8fec-4c9d-af56-6fc336f3eb5c" SourceId="1" SourceUrl="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd3" />
+    <MetadataFile FileName="MembershipUserService18.xsd" MetadataType="Schema" ID="084fd087-cc8d-4376-8ac2-7e957346850b" SourceId="1" SourceUrl="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd20" />
+    <MetadataFile FileName="MembershipUserService19.xsd" MetadataType="Schema" ID="844da009-7b5b-4007-80bc-83b866d71e4f" SourceId="1" SourceUrl="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd12" />
+    <MetadataFile FileName="MembershipUserService20.xsd" MetadataType="Schema" ID="2c735179-b3a8-42de-b026-6ccefa69f96f" SourceId="1" SourceUrl="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd13" />
+    <MetadataFile FileName="MembershipUserService.disco" MetadataType="Disco" ID="c74fd562-7a8d-4f28-9bd0-9cd112499ac2" SourceId="1" SourceUrl="http://orams.austswim.com.au:98/MembershipUserService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

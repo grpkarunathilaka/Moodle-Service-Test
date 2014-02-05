@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.Enumerations" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.Enumerations" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:simpleType name="AccreditationStatusEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Active" />
+      <xs:enumeration value="Inactive" />
+      <xs:enumeration value="Superseded" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AccreditationStatusEnum" nillable="true" type="tns:AccreditationStatusEnum" />
+  <xs:simpleType name="PermissionEnum">
+    <xs:list>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="None">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">0</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="Create">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="Edit">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="View">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:list>
+  </xs:simpleType>
+  <xs:element name="PermissionEnum" nillable="true" type="tns:PermissionEnum" />
+  <xs:simpleType name="ContactTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Business" />
+      <xs:enumeration value="Customer" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ContactTypeEnum" nillable="true" type="tns:ContactTypeEnum" />
+  <xs:simpleType name="GenderEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Male" />
+      <xs:enumeration value="Female" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="GenderEnum" nillable="true" type="tns:GenderEnum" />
+  <xs:simpleType name="HeritageEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Aboriginal" />
+      <xs:enumeration value="TorresStraitIslander" />
+      <xs:enumeration value="None" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="HeritageEnum" nillable="true" type="tns:HeritageEnum" />
+  <xs:simpleType name="MailStatusEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AllMail" />
+      <xs:enumeration value="NoMail" />
+      <xs:enumeration value="AddressUnknown" />
+      <xs:enumeration value="LeftAddress" />
+      <xs:enumeration value="ProviderFile" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="MailStatusEnum" nillable="true" type="tns:MailStatusEnum" />
+  <xs:simpleType name="NonAccreditationStatusEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Active" />
+      <xs:enumeration value="Inactive" />
+      <xs:enumeration value="Superseded" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="NonAccreditationStatusEnum" nillable="true" type="tns:NonAccreditationStatusEnum" />
+  <xs:simpleType name="ContactOriginEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Intranet" />
+      <xs:enumeration value="Extranet" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ContactOriginEnum" nillable="true" type="tns:ContactOriginEnum" />
+  <xs:simpleType name="PreferredContactMethodEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Email" />
+      <xs:enumeration value="Post" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PreferredContactMethodEnum" nillable="true" type="tns:PreferredContactMethodEnum" />
+</xs:schema>

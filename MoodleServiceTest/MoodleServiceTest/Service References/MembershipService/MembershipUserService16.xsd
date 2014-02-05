@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.Accreditation" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.Accreditation" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.AccreditationType" />
+  <xs:import schemaLocation="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.Competency" />
+  <xs:import schemaLocation="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd10" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://orams.austswim.com.au:98/MembershipUserService.svc?xsd=xsd11" namespace="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.Enumerations" />
+  <xs:complexType name="AccreditationView">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccreditationCode" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.AccreditationType" minOccurs="0" name="AccreditationType" nillable="true" type="q1:AccreditationTypeView" />
+      <xs:element minOccurs="0" name="AccreditationTypeID" type="ser:guid" />
+      <xs:element minOccurs="0" name="AustswimCertificate_TemplateID" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="AustswimLicense_TemplateID" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="Code" type="xs:int" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.Competency" minOccurs="0" name="CompetencyViewList" nillable="true" type="q2:ArrayOfCompetencyView" />
+      <xs:element minOccurs="0" name="CountryID" type="ser:guid" />
+      <xs:element minOccurs="0" name="Deleted" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="ser:guid" />
+      <xs:element minOccurs="0" name="LetterTemplateID" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Prerequisite_AccreditationTypeID" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="PresenterAccreditation" type="xs:boolean" />
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="PresenterRequirementIDs" nillable="true" type="q3:ArrayOfguid" />
+      <xs:element minOccurs="0" name="PrintAustswimCertificate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PrintAustswimLicense" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PrintRTOCertificate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RTOCertificate_TemplateID" nillable="true" type="ser:guid" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Austswim.Orams.DataContract.Views.Enumerations" minOccurs="0" name="Status" type="q4:AccreditationStatusEnum" />
+      <xs:element minOccurs="0" name="Supersede_AccreditationID" nillable="true" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AccreditationView" nillable="true" type="tns:AccreditationView" />
+</xs:schema>
