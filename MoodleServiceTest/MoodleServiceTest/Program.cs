@@ -14,9 +14,9 @@ namespace MoodleServiceTest
 
              UserLoginResponse response = client.UserLogin(new UserLoginRequest() 
              { 
-                 Email = "rangagamage@yahoo.com.au", 
-                 ApplicationId = new Guid("4302DEA5-144A-4AA8-A6B0-1A693C6CB379"), 
-                 Password = "ms40BqzzLC3M1zBofik3SlED+wsBOx7EqE315DJF1YY=" 
+                 Email = "", 
+                 ApplicationId = new Guid(""), 
+                 Password = "" 
              });
              if (response.Success)
                  Console.WriteLine("Contact Full Name: " + response.ContactView.FullName);
